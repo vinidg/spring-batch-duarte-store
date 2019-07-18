@@ -24,7 +24,7 @@ public enum Entrega {
 			if(id.equals(x.getId()))
 				return x;
 		}
-		throw new IllegalArgumentException("id inv�lido " + id);
+		throw new IllegalArgumentException("id inválido " + id);
 	}
 
 	public String getId() {

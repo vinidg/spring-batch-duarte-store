@@ -19,6 +19,7 @@ public class Cliente {
 	private LocalDate dataNascimento;
 	private String pass;
 	private String email;
+	private String playerId;
 
 	private Set<String> perfis = new HashSet<String>();
 
@@ -84,6 +85,14 @@ public class Cliente {
 
 	public void setPerfis(Set<String> perfis) {
 		this.perfis = perfis;
+	}
+
+	public String getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(String playerId) {
+		this.playerId = playerId;
 	}
 	
 }

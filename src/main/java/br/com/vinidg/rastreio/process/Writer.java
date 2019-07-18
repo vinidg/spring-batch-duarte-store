@@ -2,22 +2,20 @@ package br.com.vinidg.rastreio.process;
 
 import java.util.List;
 
-import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.vinidg.rastreio.domain.Pedido;
 import br.com.vinidg.rastreio.repositories.PedidoRepository;
 
-public class WriterImpl implements ItemWriter<List<Pedido>>{
+@Service
+public class Writer {
 
 	@Autowired
 	private PedidoRepository pedidoRepository;
 	
-	@Override
-	public void write(List<? extends List<Pedido>> items) throws Exception {
-		for(List<Pedido> pedidos : items) {
-			pedidoRepository.saveAll(pedidos);
-		}
+	public List<Pedido> write(List<Pedido> items) {
+		return pedidoRepository.saveAll(items);
 	}
 
 }

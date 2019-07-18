@@ -1,6 +1,0 @@
-#spring:
-# data:
-#  mongodb:
-##   uri: mongodb://vinidg:1234567@localhost:27017/duarte-store
-#   uri: mongodb://localhost:27017/duarte-store
-#   
